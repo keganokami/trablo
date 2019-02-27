@@ -33,8 +33,8 @@
   <p>
     <div class="form-group">
     <input class="form-control" type="text" name="title" placeholder="enter title" value="{{old('title')}}">
-    <input class="form-control" type="hidden" name="userName" placeholder="enter title" value="{{ Auth::user()->name }}">
-    <input class="form-control" type="hidden" name="email" placeholder="enter title" value="{{Auth::user()->email}}">
+    <input class="form-control" type="hidden" name="userName" placeholder="enter title" value="{{ Auth::myuser()->name }}">
+    <input class="form-control" type="hidden" name="email" placeholder="enter title" value="{{Auth::myuser()->email}}">
     </div>
     @if ($errors->has('title'))
     <span class="error">{{ $errors->first('title')}}</span>
