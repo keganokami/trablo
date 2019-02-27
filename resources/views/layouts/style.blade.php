@@ -41,8 +41,8 @@
                     </a>
                     <div class="user">
 
-                      @if (isset(Auth::user()->name))
-                      ようこそ {{ Auth::user()->name }}さん
+                      @if (isset(Auth::myuser()->name))
+                      ようこそ {{ Auth::myuser()->name }}さん
                       @else
 
                       @endif
