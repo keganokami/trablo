@@ -31,7 +31,7 @@ return [
     |
     */
     // $url = parse_url(getenv("DATABASE_URL"));
-    // 
+    //
     // $host = $url["host"];
     // $username = $url["user"];
     // $password = $url["pass"];
@@ -72,11 +72,11 @@ return [
         // ],
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', 'ec2-54-235-159-101.compute-1.amazonaws.com'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'd28e9vcnvdju4g'),
+            'username' => env('DB_USERNAME', 'ogleuteitnajfx'),
+            'password' => env('DB_PASSWORD', '95d9a6624dc67e80a1e793a14d712948437701774dd4431e57c19fe25c2601fe'),
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
