@@ -49,7 +49,7 @@
         <tr>
           <td>{{ $comment->body }}</td>
           <td>{{ $comment->userName }}</td>
-          @if ($comment->email === Auth::myuser()->email)
+          @if ($comment->email === Auth::user()->email)
           <td><a href="#" class="del" data-id="{{ $comment->id }}"><button class="btn btn-info">削除</button></a></td>
           <form method="post" action="{{ action('CommentsController@destroy', [$post, $comment]) }}" id="form_{{ $comment->id }}">
             {{ csrf_field() }}
@@ -70,7 +70,7 @@
 <form method="post" action="{{ action('CommentsController@store', $post) }}">
   {{ csrf_field() }}
   <p>
-    <input class="form-control" type="hidden" name="userName" placeholder="enter title" value="{{ Auth::myuser()->name }}">
+    <input class="form-control" type="hidden" name="userName" placeholder="enter title" value="{{ Auth::user()->name }}">
     <input class="form-control" type="hidden" name="email" value="{{ Auth::user()->email }}">
     <textarea class="form-control" rows="3" type="text" name="body" placeholder="enter comment" value="{{ old('body') }}"></textarea>
     @if ($errors->has('body'))

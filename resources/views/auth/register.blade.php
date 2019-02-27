@@ -74,7 +74,7 @@
                                 <button type="submit" class=" main-btn btn btn-primary">
                                     {{ __('新規登録') }}
                                 </button>
-                            
+
                         </div>
                         </div>
                     </form>

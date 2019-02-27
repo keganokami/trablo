@@ -22,7 +22,7 @@
      </li>
   </ul>
     <div class="contents">
-      <h1>{{ Auth::myuser()->name }} さんのページ</h1>
+      <h1>{{ Auth::user()->name }} さんのページ</h1>
           {{ csrf_field() }}
 
       <table id="example" class="table table-striped table-hover" style="width:100%">
@@ -37,7 +37,7 @@
         </thead>
         <tbody>
         @forelse ($posts as $post)
-        @if ($post->email === Auth::myuser()->email)
+        @if ($post->email === Auth::user()->email)
           <tr>
            <td><a href="{{ action('myPostsController@show', $post->id) }}">{{ $post-> title }}</a></td>
            <td>{{ $post->userName }}</td>
