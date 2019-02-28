@@ -22,15 +22,15 @@
      </li>
   </ul>
     <div class="contents">
-      <h1>{{ Auth::user()->name }} さんのページ</h1>
+      <h4>{{ Auth::user()->name }} さんのページ</h4>
           {{ csrf_field() }}
 
       <table id="example" class="table table-striped table-hover" style="width:100%">
         <thead>
           <tr>
             <th class="col-xs-6 col-ms-6 col-md-6 col-lg-6">タイトル</th>
-            <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1">作者</th>
-            <th class="col-xs-2 col-ms-2 col-md-2 col-lg-2">作成日</th>
+            <th class="col-xs-2 col-ms-2 col-md-2 col-lg-2">作者</th>
+            <th class="col-xs-3 col-ms-3 col-md-3 col-lg-3">作成日</th>
             <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1"></th>
             <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1"></th>
           </tr>
@@ -42,9 +42,10 @@
            <td><a href="{{ action('myPostsController@show', $post->id) }}">{{ $post-> title }}</a></td>
            <td>{{ $post->userName }}</td>
            <td class="create_at">{{ $post->created_at }}</td>
-           <td><a href="{{ action('myPostsController@edit', $post->id) }}" class="edit"><button class="btn btn-info"><i class="fas fa-pen"></i>編集</button></a></td>
-           <td><button type="button" class="del btn btn-danger" data-id="{{ $post->id }}">削除</button></td>
-
+           <td><a href="{{ action('myPostsController@edit', $post->id) }}" class="edit"><i class="fas fa-pen"></i></a></td>
+           <td><i class="fas fa-trash-alt del" data-id="{{ $post->id }}"></i></td>
+           <!-- <td><button type="button" class="del btn btn-danger" data-id="{{ $post->id }}">削除</button></td> -->
+<!-- <button class="btn btn-info">編集</button> -->
            <form method="post" action="{{ url('/posts', $post->id) }}" id="form_{{ $post->id }}">
          {{ csrf_field() }}
          {{ method_field('delete') }}
