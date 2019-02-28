@@ -20,12 +20,12 @@
        <i class=" fas fa-sign-out-alt" aria-hidden="true"></i><a href="{{ url('logout') }}" class="header-menu">logout</a>
      </li>
   </ul>
-  <div class="sp-user">
+  <!-- <div class="sp-user">
     @if (isset(Auth::user()->name))
     ようこそ {{ Auth::user()->name }}さん
     @else
     @endif
-  </div>
+  </div> -->
 
     <div class="contents">
 
