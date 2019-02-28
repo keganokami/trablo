@@ -39,7 +39,7 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('投稿サイト', '投稿サイト') }}
                     </a>
-                    <div class="pc-user">
+                    <div class="user">
                       @if (isset(Auth::user()->name))
                       ようこそ {{ Auth::user()->name }}さん
                       @else

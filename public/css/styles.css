@@ -40,7 +40,7 @@ li {
   list-style-type: none;
 }
 
-.pc-user {
+.user {
   line-height: 50px;
   float: right;
 
@@ -50,9 +50,9 @@ li {
   height: 100%;
 }
 
-.sp-user {
+/* .user {
   margin-top:30px;
-}
+} */
 
 @media (min-width:421px) {
   .contents {
@@ -65,9 +65,9 @@ li {
   .nav  {
     display: none;
   }
-  .sp-user {
+  /* .sp-user {
     display: none;
-  }
+  } */
 }
 
 i  {
@@ -280,10 +280,10 @@ ul .menu {
     padding: 15px;
     box-sizing: border-box;
   }
-  .pc-user {
+  /* .pc-user {
 
     display: none;
-  }
+  } */
 
   #example_filter {
     float: none;
