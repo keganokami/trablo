@@ -42,7 +42,7 @@
            <td><a href="{{ action('myPostsController@show', $post->id) }}">{{ $post-> title }}</a></td>
            <td>{{ $post->userName }}</td>
            <td class="create_at">{{ $post->created_at }}</td>
-           <td><a href="{{ action('myPostsController@edit', $post->id) }}" class="edit"><button class="btn btn-info">編集</button></a></td>
+           <td><a href="{{ action('myPostsController@edit', $post->id) }}" class="edit"><button class="btn btn-info"><i class="fas fa-pen"></i>編集</button></a></td>
            <td><button type="button" class="del btn btn-danger" data-id="{{ $post->id }}">削除</button></td>
 
            <form method="post" action="{{ url('/posts', $post->id) }}" id="form_{{ $post->id }}">

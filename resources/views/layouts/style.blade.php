@@ -39,16 +39,12 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('投稿サイト', '投稿サイト') }}
                     </a>
-                    <div class="user">
-
+                    <div class="pc-user">
                       @if (isset(Auth::user()->name))
                       ようこそ {{ Auth::user()->name }}さん
                       @else
-
                       @endif
                     </div>
-
-
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -95,7 +91,9 @@
                 </div>
             </div>
         </nav>
+
         @yield('content')
+
     </div>
 
     <!-- Scripts -->

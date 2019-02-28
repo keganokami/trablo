@@ -20,14 +20,19 @@
        <i class=" fas fa-sign-out-alt" aria-hidden="true"></i><a href="{{ url('logout') }}" class="header-menu">logout</a>
      </li>
   </ul>
-
-
+  <div class="sp-user">
+    @if (isset(Auth::user()->name))
+    ようこそ {{ Auth::user()->name }}さん
+    @else
+    @endif
+  </div>
 
     <div class="contents">
+
       <div class="row justify-content-center">
       <h2>ブログ投稿サイト</h2>
           {{ csrf_field() }}
-
+</div>
       <table id="example" class="table table-striped table-hover" style="width:100%">
 
         <thead>
