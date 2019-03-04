@@ -9,16 +9,16 @@
       <i class="fas fa-angle-double-right"></i>
     </li>
      <li class="menu-item">
-       <i class="fa fa-home" aria-hidden="true"></i><a href="{{ url('/') }}" class="header-menu">home</a></li>
+       <i class="fa fa-home" aria-hidden="true"></i><a href="{{ url('/') }}" class="header-menu">ホーム</a></li>
      </li>
      <li class="menu-item">
-       <i class="fas fa-blog" aria-hidden="true"></i><a href="{{ url('/posts/create') }}" class="header-menu">New Post</a>
+       <i class="fas fa-blog" aria-hidden="true"></i><a href="{{ url('/posts/create') }}" class="header-menu">投稿する</a>
      </li>
      <li class="menu-item">
-       <i class=" fas fa-user" aria-hidden="true"></i><a href="{{ url('/posts/myPage') }}" class="header-menu">myPage</a>
+       <i class=" fas fa-user" aria-hidden="true"></i><a href="{{ url('/posts/myPage') }}" class="header-menu">マイページ</a>
      </li>
      <li class="menu-item">
-       <i class=" fas fa-sign-out-alt" aria-hidden="true"></i><a href="{{ url('logout') }}" class="header-menu">logout</a>
+       <i class=" fas fa-sign-out-alt" aria-hidden="true"></i><a href="{{ url('logout') }}" class="header-menu">ログアウト</a>
      </li>
   </ul>
     <div class="contents">
@@ -29,8 +29,8 @@
         <thead>
           <tr>
             <th class="col-xs-6 col-ms-6 col-md-6 col-lg-6">タイトル</th>
-            <th class="col-xs-2 col-ms-2 col-md-2 col-lg-2">作者</th>
-            <th class="col-xs-3 col-ms-3 col-md-3 col-lg-3">作成日</th>
+            <!-- <th class="col-xs-2 col-ms-2 col-md-2 col-lg-2">作者</th> -->
+            <th class="col-xs-4 col-ms-4 col-md-4 col-lg-4">作成日</th>
             <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1"></th>
             <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1"></th>
           </tr>
@@ -40,7 +40,7 @@
         @if ($post->email === Auth::user()->email)
           <tr>
            <td><a href="{{ action('myPostsController@show', $post->id) }}">{{ $post-> title }}</a></td>
-           <td>{{ $post->userName }}</td>
+           <!-- <td>{{ $post->userName }}</td> -->
            <td class="create_at">{{ $post->created_at }}</td>
            <td><a href="{{ action('myPostsController@edit', $post->id) }}" class="edit"><i class="fas fa-pen"></i></a></td>
            <td><i class="fas fa-trash-alt del" data-id="{{ $post->id }}"></i></td>

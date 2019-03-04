@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('投稿サイト', '投稿サイト') }}</title>
+    <title>{{ config('Trablo', 'Trablo') }}</title>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- Styles -->
 
@@ -37,7 +37,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('投稿サイト', '投稿サイト') }}
+                        {{ config('Trablo', 'Trablo') }}
                     </a>
                     <div class="user">
                       @if (isset(Auth::user()->name))
@@ -64,19 +64,19 @@
                                   <ul class="dropdown-menu" role="menu"> -->
 
                                   <li>
-                                    <a href="{{ url('/') }}" class="header-menu">home</a>
+                                    <a href="{{ url('/') }}" class="header-menu">ホーム</a>
                                   </li>
                                   <li>
-                                    <a href="{{ url('/posts/create') }}" class="header-menu">New Post</a>
+                                    <a href="{{ url('/posts/create') }}" class="header-menu">投稿する</a>
                                   </li>
                                   <li>
-                                    <a href="{{ url('/posts/myPage') }}" class="header-menu">myPage</a>
+                                    <a href="{{ url('/posts/myPage') }}" class="header-menu">マイページ</a>
                                   </li>
                                   <li>
                                       <a href="{{ route('logout') }}"
                                           onclick="event.preventDefault();
                                                    document.getElementById('logout-form').submit();">
-                                          Logout
+                                          ログアウト
                                       </a>
 
                                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

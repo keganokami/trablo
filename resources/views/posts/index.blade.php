@@ -8,16 +8,16 @@
       <i class="fas fa-angle-double-right"></i>
     </li>
      <li class="menu-item">
-       <i class="fa fa-home" aria-hidden="true"></i><a href="{{ url('/') }}" class="header-menu">home</a></li>
+       <i class="fa fa-home" aria-hidden="true"></i><a href="{{ url('/') }}" class="header-menu">ホーム</a></li>
      </li>
      <li class="menu-item">
-       <i class="fas fa-blog" aria-hidden="true"></i><a href="{{ url('/posts/create') }}" class="header-menu">New Post</a>
+       <i class="fas fa-blog" aria-hidden="true"></i><a href="{{ url('/posts/create') }}" class="header-menu">投稿する</a>
      </li>
      <li class="menu-item">
-       <i class=" fas fa-user" aria-hidden="true"></i><a href="{{ url('/posts/myPage') }}" class="header-menu">myPage</a>
+       <i class=" fas fa-user" aria-hidden="true"></i><a href="{{ url('/posts/myPage') }}" class="header-menu">マイページ</a>
      </li>
      <li class="menu-item">
-       <i class=" fas fa-sign-out-alt" aria-hidden="true"></i><a href="{{ url('logout') }}" class="header-menu">logout</a>
+       <i class=" fas fa-sign-out-alt" aria-hidden="true"></i><a href="{{ url('logout') }}" class="header-menu">ログアウト</a>
      </li>
   </ul>
   <!-- <div class="sp-user">
@@ -30,7 +30,7 @@
     <div class="contents">
 
       <div class="row justify-content-center">
-      <h2>ブログ投稿サイト</h2>
+      <h4>ブログ投稿サイト</h4>
           {{ csrf_field() }}
 </div>
       <table id="example" class="table table-striped table-hover" style="width:100%">
@@ -49,7 +49,7 @@
           <tr>
            <td><a href="{{ action('myPostsController@show', $post->id) }}">{{ $post-> title }}</a></td>
            <td>{{ $post->userName }}</td>
-           <td>{{ $post->created_at }}</td>
+           <td class="create_at">{{ $post->created_at }}</td>
               </tr>
            <!-- <td><a href="{{ action('myPostsController@edit', $post->id) }}" class="edit">[edit]</a></td>
            <td><a href="#" class="del" data-id="{{ $post->id }}">[x]</a></td>

@@ -11,23 +11,23 @@
       <i class="fas fa-angle-double-right"></i>
     </li>
      <li class="menu-item">
-       <i class="fa fa-home" aria-hidden="true"></i><a href="{{ url('/') }}" class="header-menu">home</a></li>
+       <i class="fa fa-home" aria-hidden="true"></i><a href="{{ url('/') }}" class="header-menu">ホーム</a></li>
      </li>
      <li class="menu-item">
-       <i class="fas fa-blog" aria-hidden="true"></i><a href="{{ url('/posts/create') }}" class="header-menu">New Post</a>
+       <i class="fas fa-blog" aria-hidden="true"></i><a href="{{ url('/posts/create') }}" class="header-menu">投稿する</a>
      </li>
      <li class="menu-item">
-       <i class=" fas fa-user" aria-hidden="true"></i><a href="{{ url('/posts/myPage') }}" class="header-menu">myPage</a>
+       <i class=" fas fa-user" aria-hidden="true"></i><a href="{{ url('/posts/myPage') }}" class="header-menu">マイページ</a>
      </li>
      <li class="menu-item">
-       <i class=" fas fa-sign-out-alt" aria-hidden="true"></i><a href="{{ url('logout') }}" class="header-menu">logout</a>
+       <i class=" fas fa-sign-out-alt" aria-hidden="true"></i><a href="{{ url('logout') }}" class="header-menu">ログアウト</a>
      </li>
   </ul>
 
   <!-- <a href="{{ url('/') }}" class="header-menu">Back</a> -->
 
   <div class="contents">
-  <h1>新しい投稿</h1>
+  <h4>新しい投稿</h4>
 <form method="post" action="{{ url('/posts') }}">
   {{ csrf_field() }}
   <p>

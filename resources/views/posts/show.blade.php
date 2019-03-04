@@ -10,20 +10,20 @@
         <i class="fas fa-angle-double-right"></i>
       </li>
        <li class="menu-item">
-         <i class="fa fa-home" aria-hidden="true"></i><a href="{{ url('/') }}" class="header-menu">home</a></li>
+         <i class="fa fa-home" aria-hidden="true"></i><a href="{{ url('/') }}" class="header-menu">ホーム</a></li>
        </li>
        <li class="menu-item">
-         <i class="fas fa-blog" aria-hidden="true"></i><a href="{{ url('/posts/create') }}" class="header-menu">New Post</a>
+         <i class="fas fa-blog" aria-hidden="true"></i><a href="{{ url('/posts/create') }}" class="header-menu">投稿する</a>
        </li>
        <li class="menu-item">
-         <i class=" fas fa-user" aria-hidden="true"></i><a href="{{ url('/posts/myPage') }}" class="header-menu">myPage</a>
+         <i class=" fas fa-user" aria-hidden="true"></i><a href="{{ url('/posts/myPage') }}" class="header-menu">マイページ</a>
        </li>
        <li class="menu-item">
-         <i class=" fas fa-sign-out-alt" aria-hidden="true"></i><a href="{{ url('logout') }}" class="header-menu">logout</a>
+         <i class=" fas fa-sign-out-alt" aria-hidden="true"></i><a href="{{ url('logout') }}" class="header-menu">ログアウト</a>
        </li>
     </ul>
 <div class="contents">
-        <h2>投稿内容</h2>
+        <h4>投稿内容</h4>
   <div class="card">
     <div class="card-body bg-light" >
       <h3 class="card-title">タイトル：{{ $post->title }}</h3>
@@ -33,12 +33,12 @@
     </div>
   </div>
   <div class="comment-title">
-    <h4>コメント</h4>
+    <h5>コメント</h5>
   </div>
   <table class="table table-hover">
     <thead>
       <th class="col-xs-5 col-ms-5 col-md-5 col-lg-5"></th>
-      <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1">投稿者</th>
+      <th class="col-xs-2 col-ms-2 col-md-2 col-lg-2">投稿者</th>
       <th class="col-xs-1 col-ms-1 col-md-1 col-lg-1"></th>
     </thead>
 
@@ -50,7 +50,7 @@
           <td>{{ $comment->body }}</td>
           <td>{{ $comment->userName }}</td>
           @if ($comment->email === Auth::user()->email)
-          <td><a href="#" class="del" data-id="{{ $comment->id }}"><button class="btn btn-info">削除</button></a></td>
+          <td><i class="fas fa-trash-alt del" data-id="{{ $comment->id }}"></i></td>
           <form method="post" action="{{ action('CommentsController@destroy', [$post, $comment]) }}" id="form_{{ $comment->id }}">
             {{ csrf_field() }}
             {{ method_field('delete') }}
