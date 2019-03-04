@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('投稿サイト', '投稿サイト') }}</title>
+    <title>{{ config('Trablo', 'Trablo') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -34,7 +34,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('投稿サイト', '投稿サイト') }}
+                        {{ config('Trablo', 'Trablo') }}
                     </a>
                 </div>
 

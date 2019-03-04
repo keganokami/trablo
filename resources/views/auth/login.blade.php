@@ -70,9 +70,9 @@
                       <a href="{{ route('register') }}"><button class="main-btn btn btn-info">新規登録</button></a>
                     </div>
 
-                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                    <!-- <a class="btn btn-link" href="{{ route('password.request') }}">
                         {{ __('パスワードを忘れた方') }}
-                    </a>
+                    </a> -->
 
                 </div>
             </div>
